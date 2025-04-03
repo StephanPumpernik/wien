@@ -27,12 +27,12 @@ L.control.layers({
     "BasemapAT Ortho": L.tileLayer.provider('BasemapAT.orthofoto').addTo(map),
     "BasemapAT Terrain": L.tileLayer.provider('BasemapAT.terrain').addTo(map),
     "BasemapAT Surface": L.tileLayer.provider('BasemapAT.surface').addTo(map),
-    "BasemapAT highdpi": L.tileLayer.provider('BasemapAT.highdpi').addTo(map),
-    
+    "BasemapAT highdpiq": L.tileLayer.provider('BasemapAT.highdpi').addTo(map),
+
 }, {
     "Sehenswürdigkeiten": overlays.sights,
     "Vienna sigthseeing Linien": overlays.lines,
-    "Vienna sightseeing Haltestellen":overlays.stops,
+    "Vienna sightseeing Haltestellen": overlays.stops,
     "Fußgängerzonen": overlays.zones,
 }).addTo(map);
 
