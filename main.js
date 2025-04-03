@@ -11,18 +11,25 @@ let stephansdom = {
 // Karte initialisieren
 let map = L.map("map").setView([stephansdom.lat, stephansdom.lng], stephansdom.zoom);
 
+//Overlay definieren
+let overlays = {
+    sights: L.featureGroup().addTo(map),
+    lines: L.featureGroup().addTo(map),
+    stops: L.featureGroup().addTo(map),
+    zones: L.featureGroup().addTo(map),
+}
 
 //Layercontrol
 L.control.layers({
-"BasemapAT grau": L.tileLayer('https://mapsneu.wien.gv.at/basemap/bmapgrau/normal/google3857/{z}/{y}/{x}.png', {
-    maxZoom: 19,
-    attribution: 'Hintergrundkarte: <a href="https://www.basemap.at">basemap.at</a>'
-}).addTo(map)
+    "BasemapAT grau": L.tileLayer('https://mapsneu.wien.gv.at/basemap/bmapgrau/normal/google3857/{z}/{y}/{x}.png', {
+        maxZoom: 19,
+        attribution: 'Hintergrundkarte: <a href="https://www.basemap.at">basemap.at</a>'
+    }).addTo(map)
 }, {
-"Sehenswürdigkeiten": L.featureGroup().addTo(map),
-"Vienna sigthseeing Linien": L.featureGroup().addTo(map),
-"Vienna sightseeing Haltestellen": L.featureGroup().addTo(map),
-"Fußgängerzonen": L.featureGroup().addTo(map),
+    "Sehenswürdigkeiten": L.featureGroup().addTo(map),
+    "Vienna sigthseeing Linien": L.featureGroup().addTo(map),
+    "Vienna sightseeing Haltestellen": L.featureGroup().addTo(map),
+    "Fußgängerzonen": L.featureGroup().addTo(map),
 }).addTo(map);
 
 //maßstab machen
