@@ -77,10 +77,10 @@ async function loadLines(url) {
             else if (feature.properties.LINE_NAME == "Grey Line") {
                 lineColor = "#AAAAAA";
             }
-            else if (feature.properties.LINE_NAME == "Red Lini") { 
+            else if (feature.properties.LINE_NAME == "Red Line") { 
                 lineColor = "#FF4136";
             }
-            else if (feature.properties.LINE_NAME == "Orange Lini") { 
+            else if (feature.properties.LINE_NAME == "Orange Line") { 
                 lineColor = "#FF851B";
             } else {
                 lineColor = "#111111"
