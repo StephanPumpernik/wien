@@ -114,7 +114,7 @@ async function loadStops(url) {
     //console.log(jsondata);
     L.geoJSON(jsondata, {
         attribution: "Datenquelle: <a href= 'Stadt Wien' https://data.wien.gv.at> Stadt Wien <a/>",
-        pointToLayer: function(feature, latlng) {
+        pointToLayer: function (feature, latlng) {
             //console.log(feature.properties);
 
             return L.marker(latlng, {
