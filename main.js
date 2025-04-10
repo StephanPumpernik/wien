@@ -9,7 +9,10 @@ let stephansdom = {
 };
 
 // Karte initialisieren
-let map = L.map("map").setView([stephansdom.lat, stephansdom.lng], stephansdom.zoom);
+let map = L.map("map", {
+    maxZoom: 19
+}
+).setView([stephansdom.lat, stephansdom.lng], stephansdom.zoom);
 
 //Overlay definieren
 let overlays = {
@@ -17,7 +20,9 @@ let overlays = {
     lines: L.featureGroup().addTo(map),
     stops: L.featureGroup().addTo(map),
     zones: L.featureGroup().addTo(map),
-    hotels: L.featureGroup().addTo(map),
+    hotels: L.markerClusterGroup({
+        disableClusteringAtZoom: 15
+    }).addTo(map),
 }
 
 //Layercontrol
