@@ -69,7 +69,7 @@ async function loadSights(url) {
             layer.bindPopup(`
                 <img src= "${feature.properties.THUMBNAIL}" alt="*">
                 <h4>${feature.properties.NAME}</h4>
-                <adresse>${feature.properties.ADRESSE}</adresse>
+                <address>${feature.properties.ADRESSE}</address>
                 <a href="${feature.properties.WEITERE_INF}" target="wien">Website</a>
             `);
 
@@ -139,6 +139,14 @@ async function loadStops(url) {
                     popupAnchor: [0, -37]
                 })
             });
+        },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(`
+                <h4>${feature.properties.LINE_NAME}</h4>
+                <address>${feature.properties.LINE_ID} ${feature.properties.STAT_NAME}</address>
+            `);
+
+
         }
 
     }).addTo(overlays.stops);
