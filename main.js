@@ -181,7 +181,7 @@ async function loadZones(url) {
             }
         },
         onEachFeature: function (feature, layer) {
-            console.log(feature.properties);
+            //console.log(feature.properties);
             layer.bindPopup(`
                 <h4> ${feature.properties.ADRESSE}</h4>
                 <div><i class="fa-regular fa-clock"></i> ${feature.properties.ZEITRAUM} </div>
@@ -228,6 +228,21 @@ async function loadHotels(url) {
                     popupAnchor: [0, -37]
                 })
             });
+
+        },
+        onEachFeature: function (feature, layer) {
+            console.log(feature.properties);
+            layer.bindPopup(`
+                <h4> ${feature.properties.BETRIEB}</h4>
+                <h5>Hotel ${feature.properties.KATEGORIE_TXT}</h5>
+                <hr>
+                <div>Addr.: ${feature.properties.ADRESSE} </div>
+                <div></div>
+                <div>Tel.:<a href="${feature.properties.KONTAKT_TEL}"</a> ${feature.properties.KONTAKT_TEL}</div>
+                <div><a href="${feature.properties.KONTAKT_EMAIL}"</a> ${feature.properties.KONTAKT_EMAIL}</div> 
+                <div>  <a href="${feature.properties.WEBLINK1}" target="wien"> HOMEPAGE</a> </div>
+            `);
+
 
         }
     }).addTo(overlays.hotels);
