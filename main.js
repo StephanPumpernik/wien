@@ -118,7 +118,7 @@ async function loadLines(url) {
             }
         },
         onEachFeature: function (feature, layer) {
-            console.log(feature.properties);
+            //console.log(feature.properties);
             layer.bindPopup(`
                 <h4> <i class="fa-solid fa-bus"></i> ${feature.properties.LINE_NAME}</h4>
                 <div><i class="fa-regular fa-circle-stop"></i> ${feature.properties.FROM_NAME} </div>
@@ -184,9 +184,9 @@ async function loadZones(url) {
             console.log(feature.properties);
             layer.bindPopup(`
                 <h4> ${feature.properties.ADRESSE}</h4>
-                <div><i class="fa-regular fa-circle-stop"></i> ${feature.properties.FROM_NAME} </div>
-                <div><i class="fa-solid fa-down-long"></i></div>
-                <div><i class="fa-regular fa-circle-stop"></i> ${feature.properties.TO_NAME}</div>
+                <div><i class="fa-regular fa-clock"></i> ${feature.properties.ZEITRAUM} </div>
+                <div></div>
+                <div><i class="fa-solid fa-circle-info"></i> ${feature.properties.AUSN_TEXT}</div>
             `);
 
 
