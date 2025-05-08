@@ -239,7 +239,7 @@ async function loadHotels(url) {
                 <p>Addr.: ${feature.properties.ADRESSE} </p>
                 <p></p>
                 <p>Tel.:<a href="${feature.properties.KONTAKT_TEL}"</a> ${feature.properties.KONTAKT_TEL}</p>
-                <p>mailto:<a href="${feature.properties.KONTAKT_EMAIL}"</a> ${feature.properties.KONTAKT_EMAIL}</p> 
+                <p><a href="mailto:${feature.properties.KONTAKT_EMAIL}"</a> ${feature.properties.KONTAKT_EMAIL}</p> 
                 <p>  <a href="${feature.properties.WEBLINK1}" target="wien"> HOMEPAGE</a> </p>
             `);
 
