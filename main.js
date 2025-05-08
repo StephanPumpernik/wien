@@ -236,11 +236,11 @@ async function loadHotels(url) {
                 <h4> ${feature.properties.BETRIEB}</h4>
                 <h5>Hotel ${feature.properties.KATEGORIE_TXT}</h5>
                 <hr>
-                <div>Addr.: ${feature.properties.ADRESSE} </div>
-                <div></div>
-                <div>Tel.:<a href="${feature.properties.KONTAKT_TEL}"</a> ${feature.properties.KONTAKT_TEL}</div>
-                <div><a href="${feature.properties.KONTAKT_EMAIL}"</a> ${feature.properties.KONTAKT_EMAIL}</div> 
-                <div>  <a href="${feature.properties.WEBLINK1}" target="wien"> HOMEPAGE</a> </div>
+                <p>Addr.: ${feature.properties.ADRESSE} </p>
+                <p></p>
+                <p>Tel.:<a href="${feature.properties.KONTAKT_TEL}"</a> ${feature.properties.KONTAKT_TEL}</p>
+                <p>mailto:<a href="${feature.properties.KONTAKT_EMAIL}"</a> ${feature.properties.KONTAKT_EMAIL}</p> 
+                <p>  <a href="${feature.properties.WEBLINK1}" target="wien"> HOMEPAGE</a> </p>
             `);
 
 
